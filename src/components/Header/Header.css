@@ -1,0 +1,30 @@
+.header-container {
+  background-color: rgb(218, 0, 218);
+}
+
+.header-container-title {
+  height: 110px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-link {
+  text-align: center;
+  height: 50px;
+}
+
+.header-link a {
+  margin-right: 25px;
+  font-size: 20px;
+}
+
+.active-nav-link {
+  border-bottom: 1px solid white;
+}

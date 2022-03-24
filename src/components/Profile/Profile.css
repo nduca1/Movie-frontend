@@ -1,0 +1,21 @@
+.favorite-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+  }
+  
+  .favorite-container .delete-button {
+    margin-top: 25px;
+  }
+  .favorite-container .delete-button button {
+    padding: 10px 10px;
+    border: none;
+    width: 250px;
+    background-color: rgb(255, 6, 6);
+    color: white;
+    border-radius: 25px 25px;
+  }
+  
+  .favorite-container img {
+    height: 250px;
+  }

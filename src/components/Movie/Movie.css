@@ -1,0 +1,57 @@
+.movie-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-input {
+  margin-top: 25px;
+}
+
+.movie-input input {
+  background-color: #fffef3;
+  width: 350px;
+  padding: 5px 5px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px 5px;
+  font-size: 16px;
+}
+
+.movie-input input:focus {
+  box-shadow: 0 2px 3px #ccc;
+  border-bottom: 0.25em solid #5e5e5e;
+  top: -2px;
+}
+
+.movie-input button {
+  padding: 14px 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 5px;
+  background-color: rgb(81, 47, 255);
+  color: white;
+}
+
+.movie-input button:active {
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  transform: translateY(4px);
+}
+
+/* list container */
+.movie-list-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.movie-list-container div {
+  flex: 0 0 33.3333333%;
+  text-align: center;
+}
+
+.movie-list-item-contianer {
+  margin-bottom: 25px;
+}

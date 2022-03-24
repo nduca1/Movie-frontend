@@ -1,0 +1,22 @@
+.movie-detail-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+.movie-detail-container-right div {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.movie-detail-container-right .plot-style {
+  inline-size: 850px;
+  overflow: hidden;
+}
+.movie-detail-container button {
+  border: none;
+  padding: 15px 15px;
+  border-radius: 15px 15px;
+  background-color: black;
+  color: white;
+}
