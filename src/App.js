@@ -42,7 +42,7 @@ function App() {
         />
         <Header user={user} logout={logout} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
 
           <Route
             path="/movie"
