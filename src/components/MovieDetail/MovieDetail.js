@@ -17,14 +17,14 @@ function MovieDetail() {
 
   async function fetchSingleMovie() {
     try {
-      let response = await axios.get(
-        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&t=${params.title}`
-      );
+      let movieUrl =
+        process.env.NODE_ENV === "development"
+          ? `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&t=${params.title}`
+          : `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&t=${params.title}`;
+      let response = await axios.get(movieUrl);
 
       setMovieInfo(response.data);
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   }
 
   async function addToFavorite() {
@@ -32,7 +32,7 @@ function MovieDetail() {
       let url =
         process.env.NODE_ENV === "development"
           ? "http://localhost:3001"
-          : "https://noble-movie-backend.herokuapp.com/";
+          : "https://noble-movie-backend.herokuapp.com";
       let payload = await axios.post(
         `${url}/api/user/add-favorite-movie`,
         {
@@ -47,10 +47,8 @@ function MovieDetail() {
         }
       );
 
-      console.log(payload);
       toast.success("Congrats! Favorite Movie Saved");
     } catch (e) {
-      console.log(e);
       toast.error(`😯 ${e.response.data.payload[0]}`);
     }
   }

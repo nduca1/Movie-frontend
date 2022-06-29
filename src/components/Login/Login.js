@@ -32,7 +32,7 @@ function Login({ setUser }) {
       let url =
         process.env.NODE_ENV === "development"
           ? "http://localhost:3001"
-          : "https://noble-movie-backend.herokuapp.com/";
+          : "https://noble-movie-backend.herokuapp.com";
       let payload = await axios.post(`${url}/api/user/sign-in`, {
         email,
         password,

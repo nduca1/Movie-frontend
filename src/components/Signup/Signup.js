@@ -54,7 +54,7 @@ function Signup() {
       let url =
         process.env.NODE_ENV === "development"
           ? "http://localhost:3001"
-          : "https://noble-movie-backend.herokuapp.com/";
+          : "https://noble-movie-backend.herokuapp.com";
       await axios.post(`${url}/api/user/create-user`, {
         username,
         email,

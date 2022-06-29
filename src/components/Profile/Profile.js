@@ -16,7 +16,7 @@ function Profile() {
       let url =
         process.env.NODE_ENV === "development"
           ? "http://localhost:3001"
-          : "https://noble-movie-backend.herokuapp.com/";
+          : "https://noble-movie-backend.herokuapp.com";
       let payload = await axios.get(`${url}/api/user/get-user-favorite-movie`, {
         headers: {
           authorization: `Bearer ${window.localStorage.getItem("jwtToken")}`,
@@ -25,7 +25,6 @@ function Profile() {
 
       setFavoriteMovieArray(payload.data.payload.favoriteMovie);
     } catch (e) {
-      console.log(e);
       toast.error(`😯 ${e.response.data.payload[0]}`);
     }
   }
@@ -35,7 +34,7 @@ function Profile() {
       let url =
         process.env.NODE_ENV === "development"
           ? "http://localhost:3001"
-          : "https://noble-movie-backend.herokuapp.com/";
+          : "https://noble-movie-backend.herokuapp.com";
       let payload = await axios.delete(
         `${url}/api/user/delete-favorite-movie`,
         {
@@ -50,7 +49,6 @@ function Profile() {
       setFavoriteMovieArray(payload.data.payload);
       toast.success("Congrats! movieDelete");
     } catch (e) {
-      console.log(e);
       toast.error(`😯 ${e.response.data.payload[0]}`);
     }
   }

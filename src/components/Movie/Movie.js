@@ -30,15 +30,15 @@ function Movie() {
   async function fetchMovie() {
     setIsLoading(true);
     try {
-      let response = await axios.get(
-        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&s=${movieTitle}`
-      );
+      let movieUrl =
+        process.env.NODE_ENV === "development"
+          ? `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&s=${movieTitle}`
+          : `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&s=${movieTitle}`;
+      let response = await axios.get(movieUrl);
 
       setMovieArray(response.data.Search);
       setIsLoading(false);
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   }
 
   return (

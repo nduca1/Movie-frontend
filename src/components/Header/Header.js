@@ -3,7 +3,6 @@ import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
 
 function Header({ user, logout }) {
-  console.log(user);
   return (
     <div className="header-container">
       <div className="header-container-title">
