@@ -118,7 +118,7 @@ function Signup() {
             required
           />
           <div className={`${errorPassword ? "form-error" : undefined}`}>
-            <span>{errorPassword && "Please enter a valid email"} </span>
+            <span>{errorPassword && "Password must be 8 characters long and must contain 1 Uppercase letter, 1 Lowercase letter, and 1 special character "} </span>
           </div>
         </div>
 
